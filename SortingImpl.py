@@ -53,6 +53,32 @@ class Sorter:
                 j = j - 1
     ########################################################################
 
+    ########################################################################
+    # BubbleSort
+    def doBubbleSort(self, arr):
+     if len(arr) == 1:
+      return
+     print("Source array: " + str(arr))
+     moveOn = True
+     endIndex = len(arr) - 1
+     extIter = 0
+     while moveOn:
+      extIter += 1
+      currIndex = 1
+      swapped = False
+      intIter = 0
+      while currIndex <= endIndex:
+       intIter += 1
+       if arr[currIndex] < arr[currIndex - 1]:
+        self.swap(arr, currIndex, currIndex - 1)
+        swapped = True
+       currIndex += 1
+       print("Iteration " + str(extIter) + "," + str(intIter) + ": " + str(arr))
+      endIndex -= 1
+      moveOn = swapped
+      print("---")
+    ########################################################################
+
     def swap(self, arr, index1, index2):
         tmp = arr[index1]
         arr[index1] = arr[index2]
