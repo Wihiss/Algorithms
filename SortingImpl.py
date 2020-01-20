@@ -1,4 +1,4 @@
-# Class Sorter that provides implementation
+# Class Sorter provides implementation
 # of several sorting algorithms.
 class Sorter:
 
